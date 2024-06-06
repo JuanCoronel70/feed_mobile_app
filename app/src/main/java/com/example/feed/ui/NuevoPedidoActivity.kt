@@ -54,7 +54,7 @@ class NuevoPedidoActivity: ComponentActivity() {
             .setCancelable(false)
             .setPositiveButton("Confirmar") { dialog, id ->
                 // Acción a realizar al confirmar el pedido
-                // Puedes añadir el código para manejar la confirmación del pedido aquí
+                // Puedes añadir el código para manejar la confirmación del pedido aquí asd
                 dialog.dismiss()
             }
             .setNegativeButton("Cancelar") { dialog, id ->
