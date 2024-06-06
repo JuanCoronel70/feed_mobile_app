@@ -50,7 +50,7 @@ class NuevoPedidoActivity: ComponentActivity() {
     private fun showConfirmDialog(numeroMesa: String, descripcionPedido: String) {
         val dialogBuilder = AlertDialog.Builder(this)
 
-        dialogBuilder.setMessage("Esta es la información del pedido:\n\nNúmero de Mesa: $numeroMesa\nDescripción del Pedido:\n\n $descripcionPedido")
+        dialogBuilder.setMessage("Esta es la información del pedido:\n\nNúmero de Mesa: $numeroMesa\nDescripción del Pedido:\n\n$descripcionPedido")
             .setCancelable(false)
             .setPositiveButton("Confirmar") { dialog, id ->
                 // Acción a realizar al confirmar el pedido

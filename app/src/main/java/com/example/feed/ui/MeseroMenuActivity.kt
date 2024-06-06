@@ -12,6 +12,7 @@ class MeseroMenuActivity: ComponentActivity() {
     private lateinit var nombreMesero: String
     private lateinit var nombreMeseroTextView: TextView
     private lateinit var crearPedidoButton: Button
+    private lateinit var verPedidosButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -24,10 +25,18 @@ class MeseroMenuActivity: ComponentActivity() {
         nombreMeseroTextView = findViewById(R.id.nombreMesero)
         nombreMeseroTextView.text = nombreMesero
         crearPedidoButton = findViewById(R.id.crearPedido)
+        verPedidosButton = findViewById(R.id.verPedidos)
 
         // ================ Crear Pedido Button Handler =================== //
         crearPedidoButton.setOnClickListener{
             val intent = Intent(this, NuevoPedidoActivity::class.java)
+            intent.putExtra("user", nombreMesero)
+            startActivity(intent)
+        }
+
+        // ================ Ver Pedidos Button Handler =================== //
+        verPedidosButton.setOnClickListener{
+            val intent = Intent(this, PedidosActualesActivity::class.java)
             intent.putExtra("user", nombreMesero)
             startActivity(intent)
         }
